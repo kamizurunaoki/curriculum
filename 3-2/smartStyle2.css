@@ -1,0 +1,111 @@
+/*ウィンドウ幅が最大767pxまでの場合に適用*/
+@media  screen and (max-width: 767px) {
+    
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+       }
+
+       .wrapper {
+         /* width: 500px;  */
+           /* height: 450px; */
+           margin: 0 auto;
+       }
+
+    .header {
+        width: 300px;
+    }
+
+    .content{
+        width: 200px;
+         float: left;  
+    }
+
+    .side{
+        width: 100px;
+        /* float: left; */
+        /* clear: left; */
+    }
+    .content-top-left {
+        width: 125px;
+        /* float: left;  */
+    }
+    .content-top-right {
+          width: 75px;
+          float: left;  
+    }
+    /* .content-top-left-bottom {  */
+        /* clear: left; */
+    /* } */
+    .footer {
+        width: 300px;
+        /* clear: left; */
+    }
+}
+
+/*ウィンドウ幅が最大479pxまでの場合に適用*/
+@media  screen and (max-width: 479px) {
+   
+
+    .wrapper{
+        width: 150px;
+        margin: 0 auto;
+    }  
+    .header {
+        width: 150px;
+    
+    }
+
+    .content{
+        width: 150px;
+    }
+    .side{
+        width: 150px;
+        height: 70px;
+
+    }
+    .content-top-left {
+        width: 150px;
+    }
+    .content-top-right {
+          width: 150px;
+    }
+
+    .footer {
+        width: 150px;
+        height: 100px;
+    }
+    .content-bottom {
+        height: 150px;
+    }
+
+    /*.content-top-right{
+        float: none; /* 要素の浮動化の解除 
+        }*/
+
+        .content-top-left{
+        float: none; 
+        }
+
+      /*  .content-bottom{
+        float: none; /* 要素の浮動化の解除 
+         }*/
+
+        .content {
+        float: none; 
+        }
+        .side {
+        float: none; /* 要素の浮動化の解除 */
+        }
+        .content-top-right {
+            float: none; /* 要素の浮動化の解除 */
+            }
+            /* .footer{  
+             float: none; 要素の浮動化の解除 
+        /} */
+
+   
+   
+}
