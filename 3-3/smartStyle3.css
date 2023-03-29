@@ -1,0 +1,49 @@
+/*ウィンドウ幅が最大479pxまでの場合に適用*/
+@media  screen and (max-width: 479px) {
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .wrapper {
+        width: 200px;
+        margin: 0 auto;
+    }
+    .header {
+        width: 200px;
+        height: 200px;
+    }
+    .whitebox{
+        width: 60px;
+        height: 160px;
+        right : 70px; 
+    }
+    .left {
+        width: 200px;
+        height: 130px;
+    }
+    .right {
+        width: 200px;
+        height: 200px;
+    }
+    .orangebox1{
+        width: 130px;
+        margin: 20px 0 0 30px; 
+        border: 5px solid white;
+    }
+    .orangebox2{
+        width: 130px;
+        margin: 10px 0 0 30px;
+        border: 5px solid white;
+    }
+    .orangebox3{
+        width: 130px;
+        margin: 10px 0 0 30px;
+        border: 5px solid white;
+    }
+    .footer {
+        width: 100%;
+        height: 100px;
+        background: #d98d30;
+    }
+}
