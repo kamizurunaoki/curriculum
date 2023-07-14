@@ -20,6 +20,7 @@
                 <td th:text="${name.id}"></td>
                 <td th:text="${name.name}"></td>
                 <td>
+                    <a th:href="@{/names/edit/{id}(id=${name.id})}">Edit</a>
                     <a th:href="@{/names/delete/{id}(id=${name.id})}">Delete</a>
                 </td>
             </tr>

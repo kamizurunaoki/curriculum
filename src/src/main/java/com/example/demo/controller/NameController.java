@@ -39,10 +39,28 @@ public class NameController {
         nameRepository.save(newName);
         return "redirect:/names";
     }
-
     @GetMapping("/delete/{id}")
     public String deleteName(@PathVariable("id") Long id) {
         nameRepository.deleteById(id);
+        return "redirect:/names";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String editForm(@PathVariable("id") Long id, Model model) {
+        Name name = nameRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid name id: " + id));
+
+        model.addAttribute("name", name);
+        return "edit";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String editName(@PathVariable("id") Long id, @RequestParam("name") String newName) {
+        Name name = nameRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid name id: " + id));
+
+        name.setName(newName);
+        nameRepository.save(name);
         return "redirect:/names";
     }
 }

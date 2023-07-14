@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Name</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Edit Name</h1>
+   <form th:action="@{/names/edit/{id}(id=${name.id})}" method="post">
+        <input type="text" name="name" th:value="${name.name}">
+        <input type="submit" value="Save">
+    </form>
+    <a href="/names">Back</a>
+</body>
+</html>
